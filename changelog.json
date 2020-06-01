@@ -1,4 +1,11 @@
 {
+  "2.1.2": {
+    "date": "2020-06-01",
+    "Changes": [
+      "Remove untriggerable event",
+      "Fix button reference"
+    ]
+  },
   "2.1.1": {
     "date": "2020-02-27",
     "Categories": {
@@ -17,18 +24,24 @@
   },
   "2.1.0": {
     "date": "2020-01-23",
-    "Changes": ["0.18 release"]
+    "Changes": [
+      "0.18 release"
+    ]
   },
   "2.0.3": {
     "date": "2019-12-24",
     "Categories": {
-      "Bugfixes": ["Fix upgrading miniloaders"]
+      "Bugfixes": [
+        "Fix upgrading miniloaders"
+      ]
     }
   },
   "2.0.2": {
     "date": "2019-08-11",
     "Categories": {
-      "Bugfixes": ["Fix upgrading tiles in blueprints"]
+      "Bugfixes": [
+        "Fix upgrading tiles in blueprints"
+      ]
     }
   },
   "2.0.1": {
@@ -64,7 +77,9 @@
   },
   "1.8.1": {
     "date": "2019-06-18",
-    "Changes": ["Revert: Fix wandering entities when upgrading between sizes"]
+    "Changes": [
+      "Revert: Fix wandering entities when upgrading between sizes"
+    ]
   },
   "1.8.0": {
     "date": "2019-06-16",
@@ -87,7 +102,9 @@
   },
   "1.7.2": {
     "Categories": {
-      "Bugfixes": ["Fix incorrect config validation"],
+      "Bugfixes": [
+        "Fix incorrect config validation"
+      ],
       "Changes": [
         "Add code linting and fix linting errors",
         "Use CI environment to ensure consistent quality"
@@ -97,7 +114,9 @@
   "1.7.1": {
     "date": "2019-06-11",
     "Categories": {
-      "Features": ["Export to In-Game upgrade planner no exports half pairs"],
+      "Features": [
+        "Export to In-Game upgrade planner no exports half pairs"
+      ],
       "Bugfixes": [
         {
           "change": "Fix crash on imbalanced pairs",
@@ -128,19 +147,27 @@
   "1.6.8": {
     "date": "2019-06-04",
     "Categories": {
-      "Bugfixes": ["Revert: Add option to switch upgrade default mode"]
+      "Bugfixes": [
+        "Revert: Add option to switch upgrade default mode"
+      ]
     }
   },
   "1.6.7": {
     "date": "2019-06-04",
     "Categories": {
-      "Features": ["Add option to switch upgrade default mode"],
-      "Bugfixes": ["Fix item override on Upgrade Planner export"]
+      "Features": [
+        "Add option to switch upgrade default mode"
+      ],
+      "Bugfixes": [
+        "Fix item override on Upgrade Planner export"
+      ]
     }
   },
   " 1.6.6": {
     "Categories": {
-      "Bugfixes": ["Fix crash on player trash inventory changing"]
+      "Bugfixes": [
+        "Fix crash on player trash inventory changing"
+      ]
     }
   },
   " 1.6.5": {
@@ -152,18 +179,26 @@
   },
   " 1.6.4": {
     "Categories": {
-      "Bugfixes": ["Fix import window not accepting input"]
+      "Bugfixes": [
+        "Fix import window not accepting input"
+      ]
     }
   },
   " 1.6.3": {
     "Categories": {
-      "Features": ["Add Import from/Export to the official Upgrade Planner"],
-      "Changes": ["Align GUI with in-game Upgrade Planner"]
+      "Features": [
+        "Add Import from/Export to the official Upgrade Planner"
+      ],
+      "Changes": [
+        "Align GUI with in-game Upgrade Planner"
+      ]
     }
   },
   " 1.6.2": {
     "Categories": {
-      "Features": ["Added a toolbar shortcut"],
+      "Features": [
+        "Added a toolbar shortcut"
+      ],
       "Changes": [
         "Removed old bot functionality and use the new in built Upgrade Planner bot functionality",
         "Fix that there is no way to remove old Upgrade Planners"
@@ -171,29 +206,41 @@
     }
   },
   " 1.6.1": {
-    "Changes": ["Add thumbnail image"]
+    "Changes": [
+      "Add thumbnail image"
+    ]
   },
   " 1.6.0": {
-    "Changes": ["Upgrade for Factorio 0.17"]
+    "Changes": [
+      "Upgrade for Factorio 0.17"
+    ]
   },
   " 1.4.11": {
     "Categories": {
-      "Bugfixes": ["Fix issue with drop down index"]
+      "Bugfixes": [
+        "Fix issue with drop down index"
+      ]
     }
   },
   " 1.4.10": {
     "Categories": {
-      "Bugfixes": ["Fixed small error"]
+      "Bugfixes": [
+        "Fixed small error"
+      ]
     }
   },
   " 1.4.9": {
     "Categories": {
-      "Bugfixes": ["Fixed upgrading assembling machines without a recipe set"]
+      "Bugfixes": [
+        "Fixed upgrading assembling machines without a recipe set"
+      ]
     }
   },
   " 1.4.8": {
     "Categories": {
-      "Bugfixes": ["Fixed upgrading beacons with modules"]
+      "Bugfixes": [
+        "Fixed upgrading beacons with modules"
+      ]
     }
   },
   " 1.4.7": {
@@ -219,7 +266,9 @@
   },
   " 1.4.5": {
     "Categories": {
-      "Changes": ["Add upgrading tiles in blueprints"],
+      "Changes": [
+        "Add upgrading tiles in blueprints"
+      ],
       "Bugfixes": [
         "Fix configs not switching properly again",
         "Other clean up and fixes"
@@ -236,17 +285,23 @@
   },
   " 1.4.3": {
     "Categories": {
-      "Bugfixes": ["Fixed clearing items wouldn't update the config"]
+      "Bugfixes": [
+        "Fixed clearing items wouldn't update the config"
+      ]
     }
   },
   " 1.4.2": {
     "Categories": {
-      "Bugfixes": ["Fixed rules not being cleared properly"]
+      "Bugfixes": [
+        "Fixed rules not being cleared properly"
+      ]
     }
   },
   " 1.4.1": {
     "Categories": {
-      "Bugfixes": ["Fix choose elem button triggering for other mod GUIs"]
+      "Bugfixes": [
+        "Fix choose elem button triggering for other mod GUIs"
+      ]
     }
   },
   " 1.4.0": {
@@ -258,7 +313,9 @@
         "Removed deconstructing trees, use filtered deconstruction planners, I felt it was outside the scope of the mod.",
         "I also cleaned up a lot of the original authors code, or some other maintainers. It is somewhat cleaner now"
       ],
-      "Bugfixes": ["Fixed some other minor issues."]
+      "Bugfixes": [
+        "Fixed some other minor issues."
+      ]
     }
   },
   " 1.3.9": {
@@ -273,30 +330,45 @@
     ]
   },
   " 1.2.16": {
-    "Changes": ["Hacked in choose elem button"]
+    "Changes": [
+      "Hacked in choose elem button"
+    ]
   },
   " 1.2.15": {
-    "Changes": ["0.15 compatibility", "New GUI"]
+    "Changes": [
+      "0.15 compatibility",
+      "New GUI"
+    ]
   },
   " 1.2.14": {
     "Categories": {
-      "Changes": ["Removed distance checking as it was annoying"],
-      "Bugfixes": ["Fixed raised event error."]
+      "Changes": [
+        "Removed distance checking as it was annoying"
+      ],
+      "Bugfixes": [
+        "Fixed raised event error."
+      ]
     }
   },
   " 1.2.13": {
     "Categories": {
-      "Bugfixes": ["Fixed another belt not valid crash"]
+      "Bugfixes": [
+        "Fixed another belt not valid crash"
+      ]
     }
   },
   " 1.2.12": {
     "Categories": {
-      "Bugfixes": ["Fixed belt not valid crash"]
+      "Bugfixes": [
+        "Fixed belt not valid crash"
+      ]
     }
   },
   " 1.2.11": {
     "Categories": {
-      "Bugfixes": ["Fixed GUI not showing on player joining a game"]
+      "Bugfixes": [
+        "Fixed GUI not showing on player joining a game"
+      ]
     }
   },
   " 1.2.9": {
@@ -306,12 +378,16 @@
   },
   " 1.2.8": {
     "Categories": {
-      "Bugfixes": ["Fixed error about removed mod items"]
+      "Bugfixes": [
+        "Fixed error about removed mod items"
+      ]
     }
   },
   " 1.2.7": {
     "Categories": {
-      "Bugfixes": ["Fixed on_built_entity error"]
+      "Bugfixes": [
+        "Fixed on_built_entity error"
+      ]
     }
   },
   " 1.2.6": {
@@ -320,10 +396,14 @@
     ]
   },
   " 1.2.5": {
-    "Changes": ["Added support for deconstructing trees like this:"]
+    "Changes": [
+      "Added support for deconstructing trees like this:"
+    ]
   },
   " 1.2.3": {
-    "Changes": ["Uses better method where possible to replace entities."]
+    "Changes": [
+      "Uses better method where possible to replace entities."
+    ]
   },
   " 1.2.2": {
     "Categories": {
@@ -331,7 +411,9 @@
         "Recipe changed to deconstruction planner",
         "Change from text button to image button"
       ],
-      "Bugfixes": ["Minor fixes and further clean up by Klonan"]
+      "Bugfixes": [
+        "Minor fixes and further clean up by Klonan"
+      ]
     }
   },
   " 1.2": {
