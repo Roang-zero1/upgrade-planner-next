@@ -1,5 +1,18 @@
 # Changelog
 
+## 2.2.0 (2020-12-05)
+
+### Changes
+
+- Fixed for 1.1 release
+- Use new spawn_item shortcut
+
+### Bugfixes
+
+- Fix trash_bin icon rename (again)
+
+---
+
 ## 2.1.2 (2020-06-01)
 
 - Remove untriggerable event

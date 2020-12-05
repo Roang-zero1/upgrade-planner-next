@@ -7,7 +7,7 @@ data:extend({
     stack_size = 1,
     subgroup = "tool",
     order = "c[automated-construction]-d[upgrade-builder]",
-    flags = {"hidden"},
+    flags = {"hidden", "spawnable"},
     selection_color = {r = 0.2, g = 0.8, b = 0.2, a = 0.2},
     alt_selection_color = {r = 0.2, g = 0.2, b = 0.8, a = 0.2},
     selection_mode = {"buildable-type"},
@@ -18,10 +18,10 @@ data:extend({
     show_in_library = false,
   }, {
     type = "shortcut",
-    name = "upgrade-builder",
-    item_to_create = "upgrade-builder",
+    name = "upgrade-builder-sc",
+    item_to_spawn = "upgrade-builder",
     order = "a[alt-mode]-b[copy]",
-    action = "create-blueprint-item",
+    action = "spawn-item",
     localised_name = {"shortcut.upgrade-builder"},
     icon = {
       filename = "__upgrade-planner-next__/graphics/icons/shortcut-bar/shortcut-32.png",

@@ -141,7 +141,7 @@ local function oc_convert_ingame(event)
     local config = global.current_config[player.index]
     if not config then return end
 
-    if player.clean_cursor() then
+    if player.clear_cursor() then
       stack = player.cursor_stack
       UPConvert.to_upgrade_planner(stack, config, player)
     end
