@@ -2,8 +2,8 @@ local upgrade_planner_entity_upgrade = {}
 
 local function create_new_entity_data(player, old_entity, new_entity_prototype)
   local surface = old_entity.surface
-  player.cursor_stack.set_stack{name = "blueprint", count = 1}
-  player.cursor_stack.create_blueprint{
+  player.cursor_stack.set_stack {name = "blueprint", count = 1}
+  player.cursor_stack.create_blueprint {
     surface = surface,
     force = old_entity.force,
     area = old_entity.bounding_box,
@@ -44,7 +44,7 @@ local function create_new_entity_data(player, old_entity, new_entity_prototype)
   new_entity_data.player = player
   new_entity_data.spill = false
 
-  player.cursor_stack.set_stack{name = "upgrade-builder", count = 1}
+  player.cursor_stack.set_stack {name = "upgrade-builder", count = 1}
 
   return new_entity_data
 end
@@ -123,12 +123,12 @@ local function player_upgrade_modules(player, inventory, map, owner)
             check_module_eligibility(upgrade.item_to, recipe) then
           if player.get_item_count(upgrade.item_to) >= slot.count or
               player.cheat_mode then
-            player.remove_item{name = upgrade.item_to, count = slot.count}
-            player.insert{name = slot.name, count = slot.count}
-            slot.set_stack{name = upgrade.item_to, count = slot.count}
+            player.remove_item {name = upgrade.item_to, count = slot.count}
+            player.insert {name = slot.name, count = slot.count}
+            slot.set_stack {name = upgrade.item_to, count = slot.count}
           else
             global.temporary_ignore[slot.name] = true
-            owner.surface.create_entity{
+            owner.surface.create_entity {
               name = "flying-text",
               position = {owner.position.x - 1.3, owner.position.y - 0.5},
               text = {"upgrade-planner.insufficient-items"},
@@ -163,7 +163,7 @@ local function player_upgrade(player, old_entity, upgrade, upgrade_neighbours)
                                                    new_entity_prototype)
     local insert_item = false
 
-    --script.raise_event(defines.events.on_pre_player_mined_item,
+    -- script.raise_event(defines.events.on_pre_player_mined_item,
     --                   {player_index = player.index, entity = old_entity})
     new_entity_data.fast_replace = true
     new_entity_data.create_build_effect_smoke = false
@@ -196,7 +196,7 @@ local function player_upgrade(player, old_entity, upgrade, upgrade_neighbours)
     if old_entity.valid then
       if old_entity.type == "straight-rail" or old_entity.type == "curved-rail" then
         old_entity.destroy()
-        new_entity = surface.create_entity{
+        new_entity = surface.create_entity {
           name = upgrade.entity_to,
           position = old_entity.position,
           force = old_entity.force,
@@ -210,8 +210,8 @@ local function player_upgrade(player, old_entity, upgrade, upgrade_neighbours)
       local a = old_entity.bounding_box
 
       -- Get current entity data and copy other values
-      player.cursor_stack.set_stack{name = "blueprint", count = 1}
-      player.cursor_stack.create_blueprint{
+      player.cursor_stack.set_stack {name = "blueprint", count = 1}
+      player.cursor_stack.create_blueprint {
         surface = surface,
         force = old_entity.force,
         area = a,
@@ -222,7 +222,7 @@ local function player_upgrade(player, old_entity, upgrade, upgrade_neighbours)
       entity_data.direction = old_entity.direction
       entity_data.player = player
 
-      player.cursor_stack.set_stack{name = "upgrade-builder", count = 1}
+      player.cursor_stack.set_stack {name = "upgrade-builder", count = 1}
 
       -- Stash inventories for later distribution
       local inventories = {}
@@ -243,7 +243,7 @@ local function player_upgrade(player, old_entity, upgrade, upgrade_neighbours)
         insert_item = true
       else
         new_entity = surface.create_entity(entity_data)
-        player.create_local_flying_text{
+        player.create_local_flying_text {
           text = {"upgrade-planner.upgrade-placement-blocked"},
           position = entity_data.position,
           color = {r = 1, g = 0, b = 0},
@@ -256,9 +256,9 @@ local function player_upgrade(player, old_entity, upgrade, upgrade_neighbours)
           if new_entity ~= nil then
             local inv = new_entity.get_inventory(items.name)
             if inv then
-              inv.insert{name = item, count = count}
+              inv.insert {name = item, count = count}
             else
-              local num = player.insert{name = item, count = count}
+              local num = player.insert {name = item, count = count}
               if num < count then
                 player.surface.spill_item_stack(player.position, {
                   name = item,
@@ -270,7 +270,7 @@ local function player_upgrade(player, old_entity, upgrade, upgrade_neighbours)
         end
       end
 
-      local proxy = surface.find_entities_filtered{
+      local proxy = surface.find_entities_filtered {
         area = a,
         name = "item-request-proxy",
       }
@@ -279,7 +279,7 @@ local function player_upgrade(player, old_entity, upgrade, upgrade_neighbours)
 
     -- Insert items not replaced with fast-replace
     if insert_item then
-      local inser_cnt = player.insert{name = upgrade.item_from, count = amount}
+      local inser_cnt = player.insert {name = upgrade.item_from, count = amount}
       if inser_cnt < amount then
         player.surface.spill_item_stack(player.position, {
           name = upgrade.item_from,
@@ -289,19 +289,19 @@ local function player_upgrade(player, old_entity, upgrade, upgrade_neighbours)
     end
 
     -- Raise appropriate events
-    player.remove_item{name = upgrade.item_to, count = amount}
-    --script.raise_event(defines.events.on_player_mined_item, {
+    player.remove_item {name = upgrade.item_to, count = amount}
+    -- script.raise_event(defines.events.on_player_mined_item, {
     --  player_index = player.index,
     --  item_stack = {name = upgrade.item_from, count = 1},
-    --})
-    --script.raise_event(defines.events.on_built_entity, {
+    -- })
+    -- script.raise_event(defines.events.on_built_entity, {
     --  player_index = player.index,
     --  created_entity = new_entity,
     --  stack = player.cursor_stack,
-    --})
+    -- })
   else
     global.temporary_ignore[old_entity.name] = true
-    surface.create_entity{
+    surface.create_entity {
       name = "flying-text",
       position = {old_entity.position.x - 1.3, old_entity.position.y - 0.5},
       text = {"upgrade-planner.insufficient-items"},
@@ -348,7 +348,7 @@ local function robot_upgrade_modules(inventory, map, owner)
       local recipe = get_recipe(owner)
       if upgrade and upgrade.item_to and recipe and
           check_module_eligibility(upgrade.item_to, recipe) then
-        local entity = surface.create_entity{
+        local entity = surface.create_entity {
           name = "item-on-ground",
           stack = {name = slot.name, count = slot.count},
           position = owner.position,
@@ -366,7 +366,7 @@ local function robot_upgrade_modules(inventory, map, owner)
     end
   end
   if proxy then
-    surface.create_entity{
+    surface.create_entity {
       name = "item-request-proxy",
       force = owner.force,
       position = owner.position,
@@ -497,7 +497,8 @@ upgrade_planner_entity_upgrade.upgrade_blueprint =
           end
         end
         player.print({
-          "upgrade-planner.blueprint-book-upgrade-successful", success,
+          "upgrade-planner.blueprint-book-upgrade-successful",
+          success,
         })
         return
       end

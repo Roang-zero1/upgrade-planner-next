@@ -6,7 +6,7 @@ upgrade_planner_converter.to_upgrade_planner =
     function(stack, config, player)
       local entities = game.entity_prototypes
       local items = game.item_prototypes
-      stack.set_stack{name = "upgrade-planner"}
+      stack.set_stack {name = "upgrade-planner"}
       local idx = 1
       for _, entry in pairs(config) do
         local entity_from = entities[entry.from]
@@ -29,7 +29,8 @@ upgrade_planner_converter.to_upgrade_planner =
             else
               player.print({
                 "upgrade-planner.partial-upgrade-planner-export",
-                entity_from.localised_name, entity_to.localised_name,
+                entity_from.localised_name,
+                entity_to.localised_name,
               })
               stack.set_mapper(idx, "from", nil)
             end

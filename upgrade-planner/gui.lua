@@ -45,7 +45,7 @@ end
 upgrade_planner_gui.init = function(player)
   local flow = mod_gui.get_button_flow(player)
   if not flow.upgrade_planner_config_button then
-    local button = flow.add{
+    local button = flow.add {
       type = "sprite-button",
       name = "upgrade_planner_config_button",
       style = mod_gui.button_style,
@@ -84,7 +84,7 @@ local function open_frame(player)
   end
 
   -- Now we can build the GUI.
-  frame = flow.add{
+  frame = flow.add {
     type = "frame",
     caption = {"upgrade-planner.config-frame-title"},
     name = "upgrade_planner_config_frame",
@@ -94,13 +94,13 @@ local function open_frame(player)
   if not global.storage_index[player.index] then
     global.storage_index[player.index] = 1
   end
-  local storage_flow = frame.add{
+  local storage_flow = frame.add {
     type = "table",
     name = "upgrade_planner_storage_flow",
     column_count = 3,
   }
   -- storage_flow.style.horizontal_spacing = 2
-  local drop_down = storage_flow.add{
+  local drop_down = storage_flow.add {
     type = "drop-down",
     name = "upgrade_planner_drop_down",
   }
@@ -119,7 +119,7 @@ local function open_frame(player)
   drop_down.selected_index = index
   global.storage_index[player.index] = index
   local storage_to_restore = drop_down.get_item(drop_down.selected_index)
-  local rename_button = storage_flow.add{
+  local rename_button = storage_flow.add {
     type = "sprite-button",
     name = "upgrade_planner_storage_rename",
     sprite = "utility/rename_icon_normal",
@@ -130,7 +130,7 @@ local function open_frame(player)
   rename_button.style.minimal_width = 24
   rename_button.style.maximal_height = 24
   rename_button.style.minimal_height = 24
-  local remove_button = storage_flow.add{
+  local remove_button = storage_flow.add {
     type = "sprite-button",
     name = "upgrade_planner_storage_delete",
     sprite = "utility/trash",
@@ -141,13 +141,13 @@ local function open_frame(player)
   remove_button.style.minimal_width = 24
   remove_button.style.maximal_height = 24
   remove_button.style.minimal_height = 24
-  local rename_field = storage_flow.add{
+  local rename_field = storage_flow.add {
     type = "textfield",
     name = "upgrade_planner_storage_rename_textfield",
     text = drop_down.get_item(drop_down.selected_index),
   }
   rename_field.visible = false
-  local confirm_button = storage_flow.add{
+  local confirm_button = storage_flow.add {
     type = "sprite-button",
     name = "upgrade_planner_storage_confirm",
     sprite = "utility/confirm_slot",
@@ -159,7 +159,7 @@ local function open_frame(player)
   confirm_button.style.maximal_height = 24
   confirm_button.style.minimal_height = 24
   confirm_button.visible = false
-  local cancel_button = storage_flow.add{
+  local cancel_button = storage_flow.add {
     type = "sprite-button",
     name = "upgrade_planner_storage_cancel",
     sprite = "utility/set_bar_slot",
@@ -171,7 +171,7 @@ local function open_frame(player)
   cancel_button.style.maximal_height = 24
   cancel_button.style.minimal_height = 24
   cancel_button.visible = false
-  local ruleset_grid = frame.add{
+  local ruleset_grid = frame.add {
     type = "table",
     column_count = (UPGlobals.MAX_CONFIG_SIZE / 6 - UPGlobals.MAX_CONFIG_SIZE %
         6) * 3,
@@ -180,15 +180,15 @@ local function open_frame(player)
   }
 
   for i = 1, UPGlobals.MAX_CONFIG_SIZE / 6 do
-    ruleset_grid.add{
+    ruleset_grid.add {
       type = "label",
       caption = {"upgrade-planner.config-header-1"},
     }
-    ruleset_grid.add{
+    ruleset_grid.add {
       type = "label",
       caption = {"upgrade-planner.config-header-2"},
     }
-    ruleset_grid.add{type = "label"}
+    ruleset_grid.add {type = "label"}
   end
 
   local items = game.item_prototypes
@@ -199,7 +199,7 @@ local function open_frame(player)
       -- sprite = "item/"..UPUtility.get_config_item(player, i, "from")
       tooltip = items[from].localised_name
     end
-    local choose_elem_button_from = ruleset_grid.add{
+    local choose_elem_button_from = ruleset_grid.add {
       type = "choose-elem-button",
       name = "upgrade_planner_from_" .. i,
       style = "slot_button",
@@ -214,7 +214,7 @@ local function open_frame(player)
       -- sprite = "item/"..UPUtility.get_config_item(player, i, "to")
       tooltip = items[to].localised_name
     end
-    local choose_elem_button_to = ruleset_grid.add{
+    local choose_elem_button_to = ruleset_grid.add {
       type = "choose-elem-button",
       name = "upgrade_planner_to_" .. i,
       -- style = "slot_button",
@@ -223,10 +223,10 @@ local function open_frame(player)
       tooltip = tooltip,
     }
     choose_elem_button_to.elem_value = to
-    ruleset_grid.add{type = "label"}
+    ruleset_grid.add {type = "label"}
   end
 
-  frame.add{
+  frame.add {
     type = "checkbox",
     name = "upgrade_planner_default_bot_checkbox",
     state = global.default_bot[player.index] or false,
@@ -234,36 +234,36 @@ local function open_frame(player)
     tooltip = {"upgrade-planner.default-bot-upgrade-tooltip"},
   }
 
-  local button_grid = frame.add{type = "table", column_count = 5}
-  button_grid.add{
+  local button_grid = frame.add {type = "table", column_count = 5}
+  button_grid.add {
     type = "sprite-button",
     name = "upgrade_blueprint",
     sprite = "item/blueprint",
     tooltip = {"upgrade-planner.config-button-upgrade-blueprint"},
     style = mod_gui.button_style,
   }
-  button_grid.add{
+  button_grid.add {
     type = "sprite-button",
     name = "upgrade_planner_import_config_open",
     sprite = "utility/import_slot",
     tooltip = {"upgrade-planner.config-button-import-config"},
     style = mod_gui.button_style,
   }
-  button_grid.add{
+  button_grid.add {
     type = "sprite-button",
     name = "upgrade_planner_export_config_open",
     sprite = "utility/export_slot",
     tooltip = {"upgrade-planner.config-button-export-config"},
     style = mod_gui.button_style,
   }
-  button_grid.add{
+  button_grid.add {
     type = "sprite-button",
     name = "upgrade_planner_convert_ingame",
     sprite = "item/upgrade-planner",
     tooltip = {"upgrade-planner.config-button-export-planner"},
     style = mod_gui.button_style,
   }
-  button_grid.add{
+  button_grid.add {
     type = "button",
     caption = {"gui.close"},
     name = "upgrade_planner_frame_close",
@@ -304,13 +304,13 @@ upgrade_planner_gui.import_export_config =
 
       player.opened = nil
       local gui = player.gui.left.mod_gui_frame_flow
-      local frame = gui.add{
+      local frame = gui.add {
         type = "frame",
         caption = caption,
         name = "upgrade_planner_export_frame",
         direction = "vertical",
       }
-      local textfield = frame.add{type = "text-box"}
+      local textfield = frame.add {type = "text-box"}
       textfield.word_wrap = true
       textfield.read_only = not import
       textfield.style.minimal_width = 500
@@ -319,16 +319,16 @@ upgrade_planner_gui.import_export_config =
       if not import then
         textfield.text = game.table_to_json(global.storage[player.index])
       end
-      local flow = frame.add{type = "flow"}
+      local flow = frame.add {type = "flow"}
       if import then
-        flow.add{
+        flow.add {
           type = "button",
           caption = {"upgrade-planner.import-button"},
           name = "upgrade_planner_import_config_button",
           style = mod_gui.button_style,
         }
       end
-      flow.add{
+      flow.add {
         type = "button",
         caption = {"gui.close"},
         name = "upgrade_planner_frame_close",

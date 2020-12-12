@@ -53,7 +53,7 @@ local function gui_set_rule(player, type, index, element)
   local ruleset_grid = frame["upgrade_planner_ruleset_grid"]
   local storage_name = element.parent.parent.upgrade_planner_storage_flow
                            .children[1].get_item(
-                               global.storage_index[player.index])
+                           global.storage_index[player.index])
   local storage = global["config-tmp"][player.name]
   if not frame or not storage then return end
   if not name then
