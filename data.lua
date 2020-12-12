@@ -1,1 +1,3 @@
-require('prototypes.upgrade-builder')
+require('prototypes.items')
+require('prototypes.shortcuts')
+require('prototypes.hotkeys')
