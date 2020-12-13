@@ -143,6 +143,7 @@ end
 
 local function player_upgrade(player, old_entity, upgrade, upgrade_neighbours)
   if not old_entity then return end
+  if old_entity.to_be_deconstructed() then return end
   if not upgrade.entity_to then
     log("Tried to upgrade when entry had no entity: " .. serpent.line(upgrade))
     return
