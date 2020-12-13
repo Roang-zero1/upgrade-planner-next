@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.2.1 (2020-12-05)
+
+### Bugfixes
+
+- Fix entities marked for deconstruction more: [Issue #14](https://github.com/Roang-zero1/upgrade-planner-next/issues/14)
+
+---
+
 ## 2.2.0 (2020-12-05)
 
 ### Changes
@@ -163,7 +171,7 @@
 
 ---
 
-##  1.6.6
+## 1.6.6
 
 ### Bugfixes
 
@@ -171,7 +179,7 @@
 
 ---
 
-##  1.6.5
+## 1.6.5
 
 ### Bugfixes
 
@@ -179,7 +187,7 @@
 
 ---
 
-##  1.6.4
+## 1.6.4
 
 ### Bugfixes
 
@@ -187,7 +195,7 @@
 
 ---
 
-##  1.6.3
+## 1.6.3
 
 ### Features
 
@@ -199,7 +207,7 @@
 
 ---
 
-##  1.6.2
+## 1.6.2
 
 ### Features
 
@@ -212,19 +220,19 @@
 
 ---
 
-##  1.6.1
+## 1.6.1
 
 - Add thumbnail image
 
 ---
 
-##  1.6.0
+## 1.6.0
 
 - Upgrade for Factorio 0.17
 
 ---
 
-##  1.4.11
+## 1.4.11
 
 ### Bugfixes
 
@@ -232,7 +240,7 @@
 
 ---
 
-##  1.4.10
+## 1.4.10
 
 ### Bugfixes
 
@@ -240,7 +248,7 @@
 
 ---
 
-##  1.4.9
+## 1.4.9
 
 ### Bugfixes
 
@@ -248,7 +256,7 @@
 
 ---
 
-##  1.4.8
+## 1.4.8
 
 ### Bugfixes
 
@@ -256,7 +264,7 @@
 
 ---
 
-##  1.4.7
+## 1.4.7
 
 ### Bugfixes
 
@@ -266,7 +274,7 @@
 
 ---
 
-##  1.4.6
+## 1.4.6
 
 ### Changes
 
@@ -280,7 +288,7 @@
 
 ---
 
-##  1.4.5
+## 1.4.5
 
 ### Changes
 
@@ -293,7 +301,7 @@
 
 ---
 
-##  1.4.4
+## 1.4.4
 
 ### Bugfixes
 
@@ -302,7 +310,7 @@
 
 ---
 
-##  1.4.3
+## 1.4.3
 
 ### Bugfixes
 
@@ -310,7 +318,7 @@
 
 ---
 
-##  1.4.2
+## 1.4.2
 
 ### Bugfixes
 
@@ -318,7 +326,7 @@
 
 ---
 
-##  1.4.1
+## 1.4.1
 
 ### Bugfixes
 
@@ -326,7 +334,7 @@
 
 ---
 
-##  1.4.0
+## 1.4.0
 
 ### Changes
 
@@ -342,33 +350,33 @@
 
 ---
 
-##  1.3.9
+## 1.3.9
 
 - Adds a new item and recipe (unlocked with Upgrade builder technology) "Upgrade Builder" that allows you to replace entities on the map using construction robots. Entities are replaced by hand unless you hold shift when selecting an area to mark it for bots to upgrade.
 
 ---
 
-##  1.2.17
+## 1.2.17
 
 - Able to upgrade blueprints
 - Added hotkey for toggling GUI visibility and button visibility
 
 ---
 
-##  1.2.16
+## 1.2.16
 
 - Hacked in choose elem button
 
 ---
 
-##  1.2.15
+## 1.2.15
 
 - 0.15 compatibility
 - New GUI
 
 ---
 
-##  1.2.14
+## 1.2.14
 
 ### Changes
 
@@ -380,7 +388,7 @@
 
 ---
 
-##  1.2.13
+## 1.2.13
 
 ### Bugfixes
 
@@ -388,7 +396,7 @@
 
 ---
 
-##  1.2.12
+## 1.2.12
 
 ### Bugfixes
 
@@ -396,7 +404,7 @@
 
 ---
 
-##  1.2.11
+## 1.2.11
 
 ### Bugfixes
 
@@ -404,13 +412,13 @@
 
 ---
 
-##  1.2.9
+## 1.2.9
 
 - If you upgrade one half of an underground belt it will try to upgrade the other half
 
 ---
 
-##  1.2.8
+## 1.2.8
 
 ### Bugfixes
 
@@ -418,7 +426,7 @@
 
 ---
 
-##  1.2.7
+## 1.2.7
 
 ### Bugfixes
 
@@ -426,25 +434,25 @@
 
 ---
 
-##  1.2.6
+## 1.2.6
 
 - Upgrade planner will now raise events preplayer_mined_item, player_mined_item and on_built_entity
 
 ---
 
-##  1.2.5
+## 1.2.5
 
 - Added support for deconstructing trees like this:
 
 ---
 
-##  1.2.3
+## 1.2.3
 
 - Uses better method where possible to replace entities.
 
 ---
 
-##  1.2.2
+## 1.2.2
 
 ### Changes
 
@@ -457,13 +465,13 @@
 
 ---
 
-##  1.2
+## 1.2
 
 - I asked Klonan if we could cooperate and incorporate his version of the mod. The result is a much more powerful Upgrade builder. Now you are able to upgrade entities by hand, rather than relying on robots. You can still tell robots to do it by holding the shift key when designating the area.
 
 ---
 
-##  1.1.12
+## 1.1.12
 
 ### Changes
 
